@@ -9,9 +9,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
+<header>
+<% if current_user %>
+	<%= link_to "Logout", '/logout', class: "btn btn-default navbar-btn" %>
+<% else %>
+    <%= link_to "Login", '/login', class: "btn btn-default navbar-btn" %>
+    <%= link_to "Signup", '/signup', class: "btn btn-default navbar-btn" %>
+<% end %>
+</header>
 	<%= yield %>
-</div>
-
 </body>
 </html>

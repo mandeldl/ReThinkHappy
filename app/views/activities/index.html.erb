@@ -1,15 +1,6 @@
-<% if current_user %>
-    <p class="logout pull-right"><%= link_to "Logout", '/logout' %></a></p>
-<% else %>
-  <ul>
-    <li><%= link_to "Login", '/login' %></a></li>
-    <li><%= link_to "Signup", '/signup' %></a></li>
-  </ul>
-<% end %>
-
 <h1>Whatchoo Gonna do??</h1>
 
-<div class="container">
+<div class="container-fluid">
   <table class="table table-hover">
       <thead>
         <tr>
@@ -34,7 +25,7 @@
     </table>
   
   <br>
-
+  
   <%= render 'form' %>
   
   <%= link_to 'New Activity', new_activity_path %>
