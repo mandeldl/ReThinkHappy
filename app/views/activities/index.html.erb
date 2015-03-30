@@ -1,8 +1,5 @@
 <% if current_user %>
-  <ul>
-    <li>Signed in as <strong> <%= current_user.name %></strong></li>
-    <li><%= link_to "Logout", '/logout' %></a></li>
-  </ul>
+    <p class="logout pull-right"><%= link_to "Logout", '/logout' %></a></p>
 <% else %>
   <ul>
     <li><%= link_to "Login", '/login' %></a></li>
@@ -10,32 +7,35 @@
   </ul>
 <% end %>
 
-<h1>Listing activities</h1>
+<h1>Whatchoo Gonna do??</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Prediction</th>
-      <th>Actual</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Whatchoo Gonna Do?</th>
+          <th>Prediction</th>
+          <th>Actual</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @activities.each do |activity| %>
+          <tr>
+            <td><%= activity.name %></td>
+            <td><%= activity.prediction %></td>
+            <td><%= activity.actual %></td>
+            <td><%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-warning" %></td>
+            <td><%= link_to 'X', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  
+  <br>
 
-  <tbody>
-    <% @activities.each do |activity| %>
-      <tr>
-        <td><%= activity.name %></td>
-        <td><%= activity.prediction %></td>
-        <td><%= activity.actual %></td>
-        <td><%= link_to 'Show', activity %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Activity', new_activity_path %>
+  <%= render 'form' %>
+  
+  <%= link_to 'New Activity', new_activity_path %>
+</div>
