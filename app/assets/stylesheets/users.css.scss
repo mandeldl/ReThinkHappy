@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .login-container {
 	width: 50%;
+	min-width: 400px;
 	margin: 0 auto;
 	background-color: #fff;
 	padding: 50px;
@@ -18,5 +19,11 @@
 
 	.no-account {
 		text-align: center;
+	}
+	img {
+		display: block;
+		text-align: center;
+		width: 70px;
+		margin: 0 auto;
 	}
 }
