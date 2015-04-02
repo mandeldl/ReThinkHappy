@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Get back to what makes you happy. Give yourself the feedback you need to put your time where it matters most, and pull away from what’s dragging you down.
 
-Things you may want to cover:
+Scope
+Minimum Viable Product:
+A light & fun way to mark down how you plan to fill your day, then in the evening quickly rate how much you enjoyed or disliked each thing you did. 
 
-* Ruby version
+	Features: 
 
-* System dependencies
+In the morning, add list items: As in the jQuery project “ListEasy”, the user can create a list of what they plan to do each day (by adding to the html form element with added jquery function <input id=”todo”>). 
 
-* Configuration
+In the evening, rate list items: From a drop down menu (code to be found), rate with a percentage 
+number how much you enjoyed or disliked that project.
+	
+In a later version:
+Features:
+By the end of 7 days, get back a digest of what you enjoyed or disliked the most. To one’s surprise you may not be putting your time towards what you like the most! Time to reprioritize!
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Also, it’d be cool if the app knew how to assign an emoji face to the rating reports, so that the feeling was more approachable than like a grade!
