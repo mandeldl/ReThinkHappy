@@ -37,8 +37,10 @@
 
 <script>
   $('.star-rating').raty({
-   path: '/assets/',
    readOnly: true,
+   starHalf: "<%= asset_path 'star-half.png' %>",
+   starOff: "<%= asset_path 'star-off.png' %>",
+   starOn: "<%= asset_path 'star-on.png' %>",
    hints: ['Miserable', 'Unhappy', 'OK', 'Good', 'WAHOO!!'],
    score: function() {
     return $(this).attr('data-score');

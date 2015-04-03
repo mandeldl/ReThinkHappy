@@ -40,7 +40,9 @@
 
 <script>
   $('#star-prediction').raty({
-   path: '/assets/',
+   starHalf: "<%= asset_path 'star-half.png' %>",
+   starOff: "<%= asset_path 'star-off.png' %>",
+   starOn: "<%= asset_path 'star-on.png' %>",
    hints: ['Miserable', 'Unhappy', 'OK', 'Good', 'WAHOO!!'],
    scoreName: 'activity[prediction]'
  });
@@ -48,7 +50,9 @@
 
 <script>
   $('#star-actual').raty({
-   path: '/assets/',
+   starHalf: "<%= asset_path 'star-half.png' %>",
+   starOff: "<%= asset_path 'star-off.png' %>",
+   starOn: "<%= asset_path 'star-on.png' %>",
    hints: ['Miserable', 'Unhappy', 'OK', 'Good', 'WAHOO!!'],
    scoreName: 'activity[actual]'
  });
