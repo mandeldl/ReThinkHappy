@@ -410,3 +410,19 @@ p.copyright {
     margin: 15px 0 0;
     text-transform: uppercase;
 }
+
+td .btn, td .description  {
+  margin: 5px;
+}
+
+.big-btn {
+  display: block;
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.table-responsive {
+  max-width: 1000px;
+  margin: 25px auto;
+}

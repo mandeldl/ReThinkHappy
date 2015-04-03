@@ -13,17 +13,49 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: "Enter Activity Name" %>
   </div>
   <div class="field">
-    <%= f.label "How much you gonna like it?" %><br>
-    <%= f.number_field :prediction %>
+  <br>
+    <%= f.label :prediction %><br>
+    <div id="star-prediction"></div><br>
   </div>
   <div class="field">
-    <%= f.label "How much did ya dig it?" %><br>
-    <%= f.number_field :actual %>
+    <%= f.label :actual %><br>
+    <div id="star-actual"></div><br>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Enter Activity', :class => 'btn btn-default' %>
   </div>
 <% end %>
+
+<!-- Old prediction input -->
+<!-- f.label "How much you gonna like it?" %><br> -->
+  <!--  f.number_field :prediction %>  -->
+
+<!-- Old Actual input -->
+<!--  f.label "How much did ya dig it?" %><br> -->
+<!--  f.number_field :actual %> -->
+
+
+<script>
+  $('#star-prediction').raty({
+   path: '/assets/',
+   hints: ['Miserable', 'Unhappy', 'OK', 'Good', 'WAHOO!!'],
+   scoreName: 'activity[prediction]'
+ });
+</script>
+
+<script>
+  $('#star-actual').raty({
+   path: '/assets/',
+   hints: ['Miserable', 'Unhappy', 'OK', 'Good', 'WAHOO!!'],
+   scoreName: 'activity[actual]'
+ });
+</script>
+
+
+
+
+
+
