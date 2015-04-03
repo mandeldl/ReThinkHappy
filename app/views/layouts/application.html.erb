@@ -53,49 +53,28 @@
         </div>
         <!-- /.container -->
     </nav>
-	<!-- Old NAV
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
-			<%= link_to image_tag("rethinklogo1.gif"), "/", class: "navbar-brand" %>
-			<% if current_user %>
-				<%= link_to "Logout", '/logout', class: "btn btn-default navbar-btn navbar-right" %>
-				<%= link_to "Activities", '/activities', class: "btn btn-success navbar-btn navbar-right" %>
-			<% else %>
-			    <%= link_to "Login", '/login', class: "btn btn-default navbar-btn" %>
-			    <%= link_to "Signup", '/signup', class: "btn btn-default navbar-btn" %>
-			<% end %>
-	  </div>
-	</nav>
-	 -->
 
 </header>
 	<%= yield %>
 	<!-- Footer -->
     <footer>
         <div class="container">
+
             <div class="row">
+
                 <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <%= link_to "Home", '/' %>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <%= link_to "About", '/' %>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <%= link_to "Services", '/' %>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <%= link_to "Contact", '/' %>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">ReThinkers at NYC Codecademy Labs &copy; 2015. All Rights Reserved</p>
+                 
+                    <%= link_to image_tag("logo2.svg"), "/", class: "rotate" %>
+
+                    <br/>
+
+                    <h4>ReThink<strong style="color:#2BADD7">Happy</strong></h4>
+
+                    <p class="copyright text-muted small">Team Awesome at NYC Codecademy Labs &copy; 2015. All Rights Reserved</p>
                 </div>
+
             </div>
-        </div>
+
     </footer>
 </body>
 </html>
