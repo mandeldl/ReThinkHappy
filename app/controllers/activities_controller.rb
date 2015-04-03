@@ -7,6 +7,11 @@ class ActivitiesController < ApplicationController
   def index
     @activity = Activity.new
     @activities = Activity.all
+    if @activities.blank?
+      @avg_rating = 0
+    else
+      @avg_rating = @activities.average(:prediction).round(2)
+    end
   end
 
   # GET /activities/1

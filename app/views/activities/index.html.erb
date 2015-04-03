@@ -1,6 +1,10 @@
 <br>
 <h1 class="text-center">Yo <%= @current_user.name %>, Whatchoo Gonna Do??</h1>
 <br>
+<% if @avg_rating < 3 && @avg_rating > 0 %>
+  <h3 class="text-center">Hey, it looks like you're gonna have a rough day!<br>How about some <a target="_blank" href="https://www.youtube.com/results?search_query=puppies&page=&utm_source=opensearch">puppy videos</a> to brighten your day?</h3>
+<% end %>
+
 
   <%= link_to 'Add new Activity', new_activity_path, class: "btn btn-default big-btn" %>
   <br>
