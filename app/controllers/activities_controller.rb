@@ -10,7 +10,7 @@ class ActivitiesController < ApplicationController
     if @activities.blank?
       @avg_rating = 0
     else
-      @avg_rating = @activities.average(:prediction).round(2)
+      @avg_rating = @activities.average(:prediction)
     end
   end
 
