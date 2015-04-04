@@ -1,10 +1,36 @@
 <br>
-<h1 class="text-center">Yo <%= @current_user.name %>, Whatchoo Gonna Do??</h1>
+<h1 class="text-center">Hey <%= @current_user.name %>, what are you up to today?</h1>
 <br>
 <% if @avg_rating && @avg_rating < 3 && @avg_rating > 0 %>
   <h3 class="text-center">Hey, it looks like you're gonna have a rough day!<br>How about some <a target="_blank" href="https://www.youtube.com/results?search_query=puppies&page=&utm_source=opensearch">puppy videos</a> to brighten your day?</h3>
 <% end %>
 
+<!-- SECTION SUPPORTING Cols-->
+<div id="activities-intro" class="supporting">
+        
+        <div class="container">
+
+            <div class= "row">
+
+            <div class= "col-md-4">
+                <h3>Take A Guess!</h3>
+                <p class= "steps">First step - jot down what you plan to do today. Make a prediction on how much you <strong>expect</strong> to enjoy your activity.</p>
+            </div>
+ 
+            <div class= "col-md-4">
+                <h3>Answer for Yourself</h3>
+                <p class= "steps">Later on, mark how much each event <strong>actually</strong> made you happy.</p>
+            </div>
+          
+            <div class= "col-md-4">
+                <h3>Repave The Way</h3>
+                <p class= "steps">Start a new habit and we will track your progress. At the end of the week we will send you a recap of your progress. You'll see if you're using your energy where it <strong>matters the most.</strong></p>
+           </div>
+
+        </div>
+
+    </div>
+</div>
 
   <%= link_to 'Add new Activity', new_activity_path, class: "btn btn-default big-btn" %>
   <br>
