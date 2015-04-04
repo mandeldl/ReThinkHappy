@@ -50,11 +50,21 @@
 
       <% @activities.each do |activity| %>
         <tr>
-          <td><p class="description"><%= activity.name %></p></td>
+          <td>
+            <p class="description"><%= activity.name %></p>
+            <p>
+              <%= link_to activity, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-times"></i>
+              <% end %>
+            </p>
+          </td>
           <td><div class="star-rating" data-score="<%= activity.prediction %>"></div></td>
           <td><div class="star-rating" data-score="<%= activity.actual %>"></div></td>
-          <td><%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-warning" %></td>
-          <td><%= link_to 'X', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+          <td>
+            <%= link_to edit_activity_path(activity), class: "btn btn-warning" do %>
+              <i class="fa fa-pencil-square-o"></i> Edit
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
