@@ -1,9 +1,17 @@
-<h1>Login</h1>
-
-<%= form_tag('/login', method: 'post') do %>
-
-  <p> Email: <%= text_field_tag :email  %> </p>
-  <p> Password: <%= password_field_tag :password %> </p>
-  <%= submit_tag "Submit" %>
-
-<% end %>
+<div class="login-container">
+	<%= image_tag "solo_logos1.svg" %>
+	<br>
+	
+	<%= form_tag('/login', method: 'post') do %>
+		<div class="form-group">
+	  		<%= text_field_tag :email, nil, type: 'email', class: 'form-control', placeholder: 'Email' %>
+		</div>
+		<div class="form-group">
+	  		<%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Password' %>
+	  	</div>
+	  <%= submit_tag "Sign In", class: 'btn btn-info' %>
+	
+	<% end %>
+	
+	<p class="no-account">No account?  <%= link_to "Signup here!", '/signup' %></p>
+</div>

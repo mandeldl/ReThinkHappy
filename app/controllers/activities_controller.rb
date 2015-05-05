@@ -5,7 +5,13 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
+    @activity = Activity.new
     @activities = Activity.all
+    if @activities.blank?
+      @avg_rating = 0
+    else
+      @avg_rating = @activities.average(:prediction)
+    end
   end
 
   # GET /activities/1
@@ -29,7 +35,7 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
+        format.html { redirect_to ('/activities'), notice: 'Activity was successfully created.' }
         format.json { render :show, status: :created, location: @activity }
       else
         format.html { render :new }
@@ -43,7 +49,7 @@ class ActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @activity.update(activity_params)
-        format.html { redirect_to @activity, notice: 'Activity was successfully updated.' }
+        format.html { redirect_to ('/activities'), notice: 'Activity was successfully updated.' }
         format.json { render :show, status: :ok, location: @activity }
       else
         format.html { render :edit }

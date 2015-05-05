@@ -1,3 +1,434 @@
-// Place all the styles related to the Activities controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*!
+ * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+ /*!
+
+ /* Palette 
+ darker blue: #0F79B5;
+ med blue: #018DC2;
+ button blue: #2BADD7; bright version #3ECDFD
+ charcoal 1c1c1c #232220 whitesmoke f5f5f5
+ */
+
+ /* WORKING NOTES: 
+ * fix contact link in nav bar, will need to fix scroll tos, and might want to easein transitions
+ * might want to animate transitions on buttons, navbar
+ * might want to animate happy face logo on hover, wink? frown? spin?
+ * would like to randomly switch out hero photo
+ need photos for testimonials and for inspiring quotes
+ * might want to add bouncy circle pointer icon before first Get Started button
+ * might want to add cute illust for take a guess, mark how happy, ch-ch-changes
+ * On my wishlist: add a random Math.floor to swap images on each refresh 
+*/
+
+
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+}
+/* NAVBAR */
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding-right: 20px;
+}
+
+.navbar-default 
+.navbar-brand {
+  color: #2E2E2E;
+}
+
+.navbar-right li a {
+    font-size:16px;
+    color: red;
+}
+
+.navbar-brand span {
+    font-weight:900;
+    color: #2BADD7;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #2BADD7;
+}
+
+.topnav {
+    font-size: 20px; 
+}
+
+.navbar-default .btn-nav {
+    color: white;
+    background-color:#3DBAFC;
+    border:4px #3DBAFC solid;
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 300;
+    font-style:italic;
+    color:#f5f5f5;
+    margin-top:40px;
+    line-height:130%;
+}
+
+.lead span {
+    color: #3ECDFD;
+    font-size: 15px;
+}
+
+.lead-divider {
+    width: 380px;
+    border-top: 1px solid #3ECDFD;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+    
+.speech {
+  font-style:normal;
+  font-weight: 300;
+  position: relative;
+  padding: 15px;
+  margin: 1em 0 3em;
+  border: 5px solid #2BADD7;
+  color: #f5f5f5;
+  background:#3E849D;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.speech:before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: #2BADD7 transparent;
+  display: block;
+  width: 0;
+}
+
+.speech:after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 47px;
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: #3E849D transparent;
+  display: block;
+  width: 0;
+}
+
+
+/* INTRO HEADER */
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: image-url("sparkler.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 380px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h4 {
+    letter-spacing:1.2px;
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 80%;
+    }
+}
+
+
+
+/* SECTION SUPPORTING */
+
+.supporting {
+    padding: 50px 0 80px;
+    background: #f5f5f5;
+    text-align:center;
+}
+
+.supporting .col {
+  float: left;
+  width: 28%;
+  padding: 14px;
+}
+
+.supporting h2 {
+  color: #4c4c4c;
+  font-size: 38px;
+  margin-bottom: 30px;
+  font-weight:800;
+}
+
+.supporting h3 {
+  color: #2BADD7;
+  font-size: 30px;
+  margin-bottom: 16px;
+  margin-top: 34px;
+  font-weight:600;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.supporting p {
+  color: #1c1c1c;
+  font-size:16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.supporting .btn {
+  background-color: #eee;
+  color: #1c1c1c;
+  font-size: 18px;
+  padding: 8px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.section-divider {
+    text-align:center;
+    width: 280px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    background: image-url("blue2light.jpg") no-repeat center center;
+    background-size: cover;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    background: image-url("bluestmood.jpg") no-repeat center center;
+    z-index:2;
+    text-align: center;
+    background-size: cover;
+}
+
+.content-section-b .btn {
+    margin-top:40px;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-divider {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+
+/* SECTION BANNER */
+
+.banner {
+     
+    padding: 46px 0 230px;
+    color: #f8f8f8;
+    background: image-url("class3v2.jpg") no-repeat center center;
+    background-size: cover;
+    text-align:center;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 44px;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.btn-default {
+    padding: 10px 50px;
+    margin: 30px 10px;
+    border: 3px solid #3ECDFD;
+    color: #3ECDFD;
+    background-color: transparent;
+   -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+}
+
+.btn-reverse {
+    padding: 10px 50px;
+    margin: 30px 10px;
+    border: 3px solid #f5f5f5;
+    color: #f5f5f5;
+    background-color: transparent;
+   -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+
+}
+
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default{
+    color: #f5f5f5;
+    background-color: #3ECDFD;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+       font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    padding: 50px 0 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+
+    img {
+        width:50px;
+    }
+}
+
+.rotate {
+    margin-top:-10px;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;   
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;    
+    overflow:hidden;
+ }  
+
+.rotate:hover {
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transform:rotate(360deg);        
+} 
+
+p.copyright {
+    margin: 15px 0 0;
+    text-transform: uppercase;
+}
+
+td .btn, td .description  {
+  margin: 5px;
+}
+
+.big-btn {
+  display: block;
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.table-responsive {
+  max-width: 1000px;
+  margin: 25px auto;
+}
+
+#activities-intro {
+  padding: 0;
+  background-color: inherit;
+}

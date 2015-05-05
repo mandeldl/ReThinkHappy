@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<font horiz-adv-x="2048">
+<!-- Arial(R) Trademark of Monotype Typography ltd registered in the US Pat &amp; TM.and elsewhere. -->
+<!-- Copyright: Copyright 2015 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="ArialRoundedMTBold" units-per-em="2048" underline-position="-205" underline-thickness="102"/>
+<missing-glyph horiz-adv-x="1024" d="M82,1365l860,0l0,-1365l-860,0M123,1324l0,-1283l778,0l0,1283z"/>
+<glyph unicode="r" horiz-adv-x="897" d="M412,369l0,-228C412,86 399,44 373,17C347,-11 314,-25 274,-25C235,-25 202,-11 177,17C152,45 139,86 139,141l0,760C139,1024 183,1085 272,1085C317,1085 350,1071 370,1042C390,1013 401,971 403,915C436,971 469,1013 504,1042C538,1071 584,1085 641,1085C698,1085 754,1071 808,1042C862,1013 889,975 889,928C889,895 878,867 855,846C832,824 807,813 780,813C770,813 746,819 708,832C669,844 635,850 606,850C566,850 533,840 508,819C483,798 463,766 449,725C435,684 425,635 420,578C415,521 412,451 412,369z"/>
+</font>
+
+	<rect x="9" y="11" fill="#FFFFFF" width="180" height="179"/>
+<g>
+	<path fill="#30BBDF" d="M101.5,175.4c-42.1,0-76.4-34.3-76.4-76.4s34.3-76.4,76.4-76.4s76.4,34.3,76.4,76.4
+		S143.6,175.4,101.5,175.4z"/>
+	<path d="M101.5,30.6c37.7,0,68.4,30.7,68.4,68.4s-30.7,68.4-68.4,68.4S33.1,136.7,33.1,99S63.8,30.6,101.5,30.6 M101.5,14.6
+		c-46.6,0-84.4,37.8-84.4,84.4s37.8,84.4,84.4,84.4c46.6,0,84.4-37.8,84.4-84.4S148.1,14.6,101.5,14.6L101.5,14.6z"/>
+</g>
+<path fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M150.3,104.1c0,23.4-22.8,42.3-50.8,42.3"/>
+<path fill="#FFFFFF" stroke="#30BBDF" stroke-width="16" stroke-linejoin="round" stroke-miterlimit="10" d="M99.5,175.3
+	c-42.2,0-76.4-34.2-76.4-76.4c0-42.2,34.2-76.4,76.4-76.4"/>
+<circle cx="125" cy="73.1" r="14.5"/>
+<text transform="matrix(1 0 0 1 43.4873 138)" font-family="'ArialRoundedMTBold'" font-size="120">r</text>
+</svg>

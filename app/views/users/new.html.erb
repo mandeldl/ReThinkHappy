@@ -1,11 +1,23 @@
-<h1>Signup!</h1>
+<div class="login-container">
+	<%= image_tag "solo_logos1.svg" %>
+	<br>
 
-<%= form_for :user, url: '/users' do |f| %>
+	<%= form_for :user, url: '/users' do |f| %>
+	  <div class="form-group">
+	  	<%= f.text_field :name, class:"form-control", placeholder: "Name" %>
+  	</div>
+	  <div class="form-group">
+	  	<%= f.text_field :email, class:"form-control", placeholder: "Email" %>
+		</div>
+	  <div class="form-group">
+	  	<%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+	  </div>
+	  <div class="form-group">
+	  	<%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %>
+	  </div>
+	  <%= f.submit "Sign Up", class:"btn btn-info" %>
 
-  <p> Name: <%= f.text_field :name %> </p>
-  <p> Email: <%= f.text_field :email %> </p>
-  <p> Password: <%= f.password_field :password %> </p>
-  <p> Password Confirmation: <%= f.password_field :password_confirmation %> </p>
-  <p> <%= f.submit %> </p>
+	<% end %>
 
-<% end %>
+	<p class="no-account">Already a member?  <%= link_to "Log in here!", '/login' %></p>
+</div>

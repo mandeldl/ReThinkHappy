@@ -1,41 +1,85 @@
-<% if current_user %>
-  <ul>
-    <li>Signed in as <strong> <%= current_user.name %></strong></li>
-    <li><%= link_to "Logout", '/logout' %></a></li>
-  </ul>
-<% else %>
-  <ul>
-    <li><%= link_to "Login", '/login' %></a></li>
-    <li><%= link_to "Signup", '/signup' %></a></li>
-  </ul>
+<br>
+<h1 class="text-center">Hey <%= @current_user.name %>, what are you up to today?</h1>
+<br>
+<% if @avg_rating && @avg_rating < 3 && @avg_rating > 0 %>
+  <h3 class="text-center">Hey, it looks like you're gonna have a rough day!<br>How about some <a target="_blank" href="https://www.youtube.com/results?search_query=puppies&page=&utm_source=opensearch">puppy videos</a> to brighten your day?</h3>
 <% end %>
 
-<h1>Listing activities</h1>
+<!-- SECTION SUPPORTING Cols-->
+<div id="activities-intro" class="supporting">
+        
+        <div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Prediction</th>
-      <th>Actual</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+            <div class= "row">
 
-  <tbody>
-    <% @activities.each do |activity| %>
+            <div class= "col-md-4">
+                <h3>Take A Guess!</h3>
+                <p class= "steps">First step - jot down what you plan to do today. Make a prediction on how much you <strong>expect</strong> to enjoy your activity.</p>
+            </div>
+ 
+            <div class= "col-md-4">
+                <h3>Answer for Yourself</h3>
+                <p class= "steps">Later on, mark how much each event <strong>actually</strong> made you happy.</p>
+            </div>
+          
+            <div class= "col-md-4">
+                <h3>Repave The Way</h3>
+                <p class= "steps">Start a new habit and we will track your progress. At the end of the week we will send you a recap of your progress. You'll see if you're using your energy where it <strong>matters the most.</strong></p>
+           </div>
+
+        </div>
+
+    </div>
+</div>
+
+  <%= link_to 'Add new Activity', new_activity_path, class: "btn btn-default big-btn" %>
+  <br>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
       <tr>
-        <td><%= activity.name %></td>
-        <td><%= activity.prediction %></td>
-        <td><%= activity.actual %></td>
-        <td><%= link_to 'Show', activity %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Activity Name</th>
+        <th>Prediction</th>
+        <th>Actual</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    
+    <tbody>
 
-<br>
+      <% @activities.each do |activity| %>
+        <tr>
+          <td>
+            <p class="description"><%= activity.name %></p>
+            <p>
+              <%= link_to activity, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-times"></i>
+              <% end %>
+            </p>
+          </td>
+          <td><div class="star-rating" data-score="<%= activity.prediction %>"></div></td>
+          <td><div class="star-rating" data-score="<%= activity.actual %>"></div></td>
+          <td>
+            <%= link_to edit_activity_path(activity), class: "btn btn-warning" do %>
+              <i class="fa fa-pencil-square-o"></i> Edit
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-<%= link_to 'New Activity', new_activity_path %>
+<script>
+  $('.star-rating').raty({
+   readOnly: true,
+   starHalf: "<%= asset_path 'star-half.png' %>",
+   starOff: "<%= asset_path 'star-off.png' %>",
+   starOn: "<%= asset_path 'star-on.png' %>",
+   hints: ['Miserable', 'Unhappy', 'OK', 'Good', 'WAHOO!!'],
+   score: function() {
+    return $(this).attr('data-score');
+   }
+ });
+</script>
